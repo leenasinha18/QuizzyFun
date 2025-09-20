@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Timed Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <h1>Timed Quiz</h1>
+        <div class="small">
+          Timer per question: <strong id="timerLimitDisplay">10s</strong>
+        </div>
+      </header>
+      <section class="card" id="quizCard">
+        <div class="meta">
+          <div class="small">
+            Question <span id="qIndex">1</span>/<span id="qTotal">1</span>
+          </div>
+          <div class="timer" id="timer">10s</div>
+        </div>
+
+        <div class="progress" aria-hidden="true">
+          <span id="progressBar"></span>
+        </div>
+
+        <div style="margin-top: 14px">
+          <div class="question" id="questionText">Loading...</div>
+          <div class="choices" id="choices"></div>
+        </div>
+
+        <div class="controls" style="margin-top: 14px">
+          <button id="prevBtn" class="ghost">Previous</button>
+          <button id="nextBtn">Next</button>
+        </div>
+
+        <div id="reviewArea" style="margin-top: 14px"></div>
+      </section>
+
+      <section
+        id="finalCard"
+        class="card"
+        style="margin-top: 14px; display: none"
+      >
+        <div class="result">
+          <h2 id="scoreHeading">You scored 0 / 0</h2>
+          <p class="small" id="percentText"></p>
+          <div id="reviewList"></div>
+          <div style="margin-top: 12px">
+            <button id="retryBtn">Retry</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
